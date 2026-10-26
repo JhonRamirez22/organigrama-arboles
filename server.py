@@ -15,8 +15,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 from organigrama import OrgChart
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
-CARPETA_STATIC = os.path.join(RAIZ, "static")
-ARCHIVO_DATOS = os.path.join(RAIZ, "data", "organigrama.json")
+CARPETA_STATIC = os.path.join(RAIZ, "public")
+ARCHIVO_DATOS = os.environ.get("ORG_DATA_FILE", os.path.join(RAIZ, "data", "organigrama.json"))
 
 TIPOS = {
     ".html": "text/html; charset=utf-8",

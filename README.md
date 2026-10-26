@@ -48,7 +48,9 @@ organigrama/
   __init__.py      exporta Employee y OrgChart
   org_chart.py     clases Employee (nodo) y OrgChart (árbol y sus operaciones)
 server.py          API HTTP y archivos estáticos (solo biblioteca estándar)
-static/
+api/
+  index.py         entrada serverless para Vercel (reutiliza server.py)
+public/
   index.html       interfaz
   style.css        estilos
   app.js           lógica del frontend (sin frameworks)
