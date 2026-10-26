@@ -23,6 +23,14 @@ Abrir <http://localhost:8000>. Para otro puerto: `python3 server.py 5000`.
 python3 -m unittest discover -s tests -v
 ```
 
+## Despliegue en Vercel
+
+Demo en vivo: <https://organigrama-arboles.vercel.app>
+
+- `api/index.py` es la función serverless que reutiliza `server.py`.
+- `public/` contiene la interfaz; `vercel.json` enruta `/api/*` a la función.
+- **Limitación de persistencia:** Vercel no permite escribir en el código desplegado. La función trabaja sobre una copia en `/tmp` que se crea desde `data/organigrama.json`. Los cambios duran mientras la instancia esté activa y se pierden al reciclarse. Para datos permanentes hace falta una base de datos externa (por ejemplo Postgres o Vercel KV).
+
 ## Operaciones del árbol
 
 | Operación | Método | Complejidad |

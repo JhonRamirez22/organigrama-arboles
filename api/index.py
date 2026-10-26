@@ -21,4 +21,8 @@ if not os.path.exists(DATOS_TEMPORALES):
 os.environ["ORG_DATA_FILE"] = DATOS_TEMPORALES
 
 # Debe importarse después de fijar ORG_DATA_FILE: server.py carga los datos al importarse.
-from server import Manejador as handler  # noqa: E402
+from server import Manejador  # noqa: E402
+
+
+class handler(Manejador):
+    """Clase que Vercel busca al ejecutar la función."""
