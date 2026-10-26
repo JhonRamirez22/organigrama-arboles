@@ -1,0 +1,17 @@
+[
+  {"id": "E01", "nombre": "Roberto Aguilar", "cargo": "Director general", "area": "Dirección", "salario": 9000, "jefe_id": null},
+  {"id": "E02", "nombre": "Ana Torres", "cargo": "Gerente de Ventas", "area": "Ventas", "salario": 5000, "jefe_id": "E01"},
+  {"id": "E03", "nombre": "Luis Pérez", "cargo": "Gerente de TI", "area": "Tecnología", "salario": 5200, "jefe_id": "E01"},
+  {"id": "E04", "nombre": "María Gómez", "cargo": "Gerente de Finanzas", "area": "Finanzas", "salario": 5100, "jefe_id": "E01"},
+  {"id": "E05", "nombre": "Carlos Ruiz", "cargo": "Jefe de Recursos Humanos", "area": "Recursos Humanos", "salario": 4300, "jefe_id": "E01"},
+  {"id": "E06", "nombre": "Sofía Díaz", "cargo": "Ejecutiva de cuentas", "area": "Ventas", "salario": 2600, "jefe_id": "E02"},
+  {"id": "E07", "nombre": "Jorge Vega", "cargo": "Ejecutivo de cuentas", "area": "Ventas", "salario": 2500, "jefe_id": "E02"},
+  {"id": "E08", "nombre": "Lucía Mora", "cargo": "Desarrolladora senior", "area": "Tecnología", "salario": 3800, "jefe_id": "E03"},
+  {"id": "E09", "nombre": "Pedro Castillo", "cargo": "Desarrollador backend", "area": "Tecnología", "salario": 3000, "jefe_id": "E08"},
+  {"id": "E10", "nombre": "Valentina Ríos", "cargo": "Desarrolladora frontend", "area": "Tecnología", "salario": 2900, "jefe_id": "E08"},
+  {"id": "E11", "nombre": "Andrés Soto", "cargo": "Analista de soporte", "area": "Tecnología", "salario": 2100, "jefe_id": "E03"},
+  {"id": "E12", "nombre": "Camila Herrera", "cargo": "Contadora", "area": "Finanzas", "salario": 2800, "jefe_id": "E04"},
+  {"id": "E13", "nombre": "Diego Navarro", "cargo": "Analista financiero", "area": "Finanzas", "salario": 2400, "jefe_id": "E04"},
+  {"id": "E14", "nombre": "Laura Cárdenas", "cargo": "Reclutadora", "area": "Recursos Humanos", "salario": 2300, "jefe_id": "E05"},
+  {"id": "E15", "nombre": "Miguel Flores", "cargo": "Asistente de RR. HH.", "area": "Recursos Humanos", "salario": 1700, "jefe_id": "E05"}
+]

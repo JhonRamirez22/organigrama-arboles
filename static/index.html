@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organigrama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="shell">
+    <div class="brand">Organigrama</div>
+    <div id="stats" class="stats" aria-live="polite"></div>
+  </header>
+
+  <main class="layout">
+    <section class="panel tree-panel" aria-labelledby="tree-title">
+      <div class="panel-head">
+        <h2 id="tree-title">Jerarquía</h2>
+        <div class="toolbar">
+          <button id="expand-all" class="ghost small" type="button">Expandir todo</button>
+          <button id="collapse-all" class="ghost small" type="button">Contraer</button>
+        </div>
+      </div>
+      <input id="search" type="search" placeholder="Buscar por nombre, cargo o área" autocomplete="off">
+      <p id="search-info" class="muted" aria-live="polite"></p>
+      <div id="tree" class="tree"></div>
+    </section>
+
+    <aside class="side">
+      <section class="panel" id="detail" aria-live="polite">
+        <p class="muted">Seleccione un empleado para ver su posición en la jerarquía.</p>
+      </section>
+
+      <section class="panel">
+        <h2 id="form-title">Nuevo empleado</h2>
+        <form id="employee-form" autocomplete="off">
+          <label>Nombre
+            <input name="nombre" required>
+          </label>
+          <label>Cargo
+            <input name="cargo" required>
+          </label>
+          <label>Área
+            <input name="area" required>
+          </label>
+          <label>Salario anual
+            <input name="salario" type="number" min="0" step="any" required>
+          </label>
+          <label id="manager-field">Jefe directo
+            <select name="jefe_id" id="manager-select"></select>
+          </label>
+          <div class="actions">
+            <button type="submit" class="primary">Guardar</button>
+            <button type="button" id="cancel-edit" class="ghost hidden">Cancelar edición</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>¿Quién aprueba?</h2>
+        <p class="muted">Ancestro común más cercano entre dos personas.</p>
+        <div class="pair">
+          <label>Primera persona
+            <select id="pair-a"></select>
+          </label>
+          <label>Segunda persona
+            <select id="pair-b"></select>
+          </label>
+        </div>
+        <p id="pair-result" class="result" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Salarios por área</h2>
+        <table class="area-table" id="area-table"></table>
+      </section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
